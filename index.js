@@ -65,6 +65,8 @@ function add() {
             product,
             quantity
         })
+        const number = document.getElementById("number")
+        number.value = "1"
         // console.log("Selected Product",product)
         // console.log("Selected Quantity",quantity)
     }
@@ -79,6 +81,11 @@ function submit() {
     }
     document.getElementById("submit-button").disabled = true;
     document.getElementById("add-button").disabled = true;
+    document.getElementById("clear-cart").disabled = true;
+    document.getElementById("increase").disabled = true;
+    document.getElementById("decrease").disabled = true;
+    document.getElementById("category").disabled = true;
+    document.getElementById("product").disabled = true;
     console.log("sender ID",sender)
 
     window.parent.postMessage(
@@ -95,18 +102,9 @@ function submit() {
         }),
         "*"
       );
-    //   console.log(res)
-    // var settings = {
-    //     "url": "https://app.yellowmessenger.com/integrations/yellowmessenger/message",
-    //     "method": "POST",
-    //     "timeout": 0,
-    //     "headers": {
-    //       "Content-Type": "application/json"
-    //     },
-    //     "data": JSON.stringify({"sender": sender,"botId":"x1604319729663","data":{"event":{"code":"Order_id","payload":"123"}},"source":"syncApi"}),
-    //   };
-      
-    //   $.ajax(settings).done(function (response) {
-    //     console.log(response);
-    //   });
+}
+
+function clearCart(){
+    const cart = document.getElementById("selection")
+    cart.innerHTML = ""
 }
