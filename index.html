@@ -17,7 +17,7 @@
 <body style="margin-left: 20px; margin-top: 10px;">
     <div style="width: 300px;">
         <div id="selection" style="width: 65%;"></div>
-        <select class="select-css" name="category" value="Select Category" id="category"
+        <select class="select-css" name="category" value="Select Category" id="category" style="margin-bottom: 5px;"
             onchange="populate(this.id,'product')">
             <option value="Category" disabled selected>Select Category</option>
             <option value="Sayuran">Sayuran</option>
@@ -57,7 +57,7 @@
               <td>{{quantity}}</td>
             </tr>
           </table> -->
-    <p style="width: 95%;font-family: sans-serif;">{{product}} &nbsp &nbsp &nbsp : &nbsp &nbsp &nbsp {{quantity}}</p>
+    <p style="width: 95%;font-family: sans-serif;">{{product}} &nbsp : &nbsp &nbsp {{quantity}}</p>
     </script>
 </body>
 
