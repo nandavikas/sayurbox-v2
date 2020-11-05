@@ -6,11 +6,10 @@
     color: #444;
     line-height: 1.0;
     padding: .6em 1.4em .5em .8em;
-    width: 60%;
-    max-width: 60%;
+    width: 70%;
+    max-width: 70%;
     box-sizing: border-box;
     margin: 5px 0px 0px 0px;
-    margin-bottom: 5px;
     border: 1px solid #aaa;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
     border-radius: .5em;
@@ -105,3 +104,20 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.cart-header {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    width: 300px;
+  }
+  .cart-header h4 {
+    text-align: left;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .cart-header input {
+    position: absolute;
+    right: 0;
+    margin-top: 0px;
+  }
