@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product List</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="width: 300px;">
+        <div id="selection"></div>
+        <select class="select-css" name="category" value="Select Category" id="category"
+            onchange="populate(this.id,'product')">
+            <option value="Category" disabled selected>Select Category</option>
+            <option value="Sayuran">Sayuran</option>
+            <option value="Buah Segar">Buah Segar</option>
+            <option value="Karbohidrat">Karbohidrat</option>
+            <option value="Terbaru">Terbaru</option>
+            <option value="Spesial Promo">Spesial Promo</option>
+            <!-- <option value="Terlaris">Terlaris</option> -->
+            <option value="Organik">Organik</option>
+            <option value="Menu Sehat">Menu Sehat</option>
+            <option value="Siap Santap">Siap Santap</option>
+            <option value="Minuman">Minuman</option>
+            <option value="Bumbu Dapur">Bumbu Dapur</option>
+            <option value="Susu, Telur dan Keju">Susu, Telur dan Keju</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Daging">Daging</option>
+            <option value="Ayam">Ayam</option>
+            <option value="Semua Produk">Semua Produk</option>
+        </select>
+        <select class="select-css" name="product" id="product">
+            <option value="" disabled selected>Select Product</option>
+        </select>
+        <div class="container" style="text-align: left;width: 60%;">
+            <input type="button" onclick="decrementValue()" value="-" style="width: 15%;"/>
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" style="width: 40%;"/>
+            <input type="button" onclick="incrementValue()" value="+" style="width: 15%;"/>
+            <input type="button" value="Add" id="add-button" onclick="add()" style="margin-left: 10px;width: 30%;"/>
+        </div>
+        <input type="button" value="Submit" id="submit-button" onclick="submit()" style="width: 60%;margin-top: 5px;"/>
+    </div>
+
+    <script id="selection-template" type="text/html">
+        <!-- <table style="border-spacing:15px">
+            <tr>
+              <td>{{product}}</td>
+              <td>{{quantity}}</td>
+            </tr>
+          </table> -->
+          <p>{{product}}    :    {{quantity}}</p>
+    </script>
+</body>
+
+</html>
